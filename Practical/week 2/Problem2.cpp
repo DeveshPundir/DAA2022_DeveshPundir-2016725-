@@ -3,7 +3,10 @@
 #include<vector>
 using namespace std;
 int main(){
-  vector<int> v;
+  int t;
+  cin>>t;
+  while(t--)
+  {  vector<int> v;
   int n;
   cout<<"FIRST ENTER THE NO. OF ELEMENTS TO ENTERED THEN ENTER THE SORTED ARRAY ELEMENTS"<<endl;
   cin>>n;
@@ -14,7 +17,7 @@ int main(){
       v.push_back(a);
 
   }
-  int i,j,k;
+  int i,j,k,f=0;
   for(int k=n-1;k>=0;k--)
   {
       int sum=v[k];
@@ -23,6 +26,7 @@ int main(){
       {
           if(v[i]+v[j]==sum)
           {
+            f=1;
               cout<<i<<"," <<j<<","<<k<<endl;
               i++;
               j--;
@@ -32,6 +36,9 @@ int main(){
            else
            j--;
       }
+    if(f==0)
+      cout<<"No sequence Found"<<endl;
+  }
   }
 
 return 0;
