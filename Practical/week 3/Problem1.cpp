@@ -3,7 +3,7 @@
 using namespace std;
 void insertion_sort(int a[],int n)
 {
-    int count=0;
+    int count=0,s=0;
     for(int i=1;i<n;i++)
     {
          int c=a[i];
@@ -11,18 +11,23 @@ void insertion_sort(int a[],int n)
          while(c<a[j]&&j>=0)
          {
             count++;
+             s++;
              a[j+1]=a[j];
              j--;
 
          }
          a[j+1]=c;
-
+          s++;
     }
-    cout<<count<<endl;
+    cout<<count<<" are comparisons and "<<s<<" are no. of swaps"<<endl;
 }
 
 int main(){
- int a[30];
+
+    int t;
+    cin>>t;
+    while(t--)
+    {int a[30];
   int n;
   
   cout<<"Enter the no. of elements to be stored"<<endl;
@@ -38,6 +43,6 @@ int main(){
   for(int i=0;i<n;i++)
   {
       cout<<a[i]<<" ";
-  }
+  }}
 return 0;
 }
