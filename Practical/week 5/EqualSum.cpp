@@ -10,22 +10,21 @@ void quicksort(int*, int, int);
 void equalSum(int n, int arr[], int k)
 {
     quicksort(arr, 0, n-1);
-    int i, j, t, out=0;
+    int i=0, j=n-1, t, out=0;
     
-    for(i=0; i<n-1; ++i)
-    {
-        for(j=i+1; j<n; ++j)
-        {
-            t = arr[i]+arr[j];
-            if(t==k){
-                if(out) cout << ", ";
-                cout << arr[i] << " " << arr[j];
-                ++out;
-            }
-            else if(t>k) break;
-        }
-
-    }
+     while(i<j)
+      {
+          if(v[i]+v[j]==k)
+          {
+              cout<<i<<"," <<j<<","<<k<<endl;
+              out=1;
+              break;
+          }
+          else if( k>v[i]+v[j])
+           i++;
+           else
+           j--;
+      }
 
     if(!out) 
         cout << "No such pair Exist";
