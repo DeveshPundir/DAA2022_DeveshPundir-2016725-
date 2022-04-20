@@ -57,7 +57,16 @@ void mergesort(int a[], int l, int r,int* comparison)
         merge(a, l, mid, r,comparison);
     }
 }
-
+void inversion(int a[],int n)
+{
+    int c=0;
+    for(int i=0;i<n-1;i++)
+    {
+        for(int j=i+1;j<n;j++)
+        c++;
+    }
+    cout<<"The total no. of inversions are "<<c;
+}
 int main()
 {
 
@@ -77,7 +86,9 @@ int main()
         }
         int comparison=0;
         mergesort(a, 0, n - 1,&comparison);
-         cout<<"no. of comparisons done are"<<comparison<<endl;
+        inversion(a,n);
+         cout<<"\n no. of comparisons done are "<<comparison<<endl;
+         
         for (int i = 0; i < n; i++)
         {
             cout << a[i] << " ";
