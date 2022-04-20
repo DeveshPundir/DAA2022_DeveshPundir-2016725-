@@ -36,9 +36,10 @@ int main(){
            else
            j--;
       }
+  }
     if(f==0)
       cout<<"No sequence Found"<<endl;
-  }
+  
   }
 
 return 0;
