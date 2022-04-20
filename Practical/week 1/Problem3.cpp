@@ -21,7 +21,7 @@ int main()
        int key;
        cin>>key;
        int i=0,j=n-1,f=0;
-       while(i<j)
+       while(i<=j)
        {
           count++;
            int mid=(i+j)/2;
@@ -33,7 +33,7 @@ int main()
            }
            
            if(v[mid]>key)
-           j=mid;
+           j=mid-1;
            else
            i=mid+1;
        }
