@@ -18,7 +18,7 @@ void selectionsort (int a[],int n)
               pos=j;
           }
         }
-        if(pos!=i)
+       
         {   swap++;
             a[pos]=a[i];
             a[i]=min;
@@ -27,7 +27,10 @@ void selectionsort (int a[],int n)
     cout<<count<<" "<<"--the no. of comparison and "<<swap<<"--are the no. of swaps"<<endl;
 }
 int main(){
- int a[30];
+    int t;
+    cin>>t;
+ while(t--)
+ {int a[30];
   int n;
   
   cout<<"Enter the no. of elements to be stored"<<endl;
@@ -43,5 +46,6 @@ int main(){
   {
       cout<<a[i]<<" ";
   }
+ }
 return 0;
 }
