@@ -23,6 +23,7 @@ int main()
        int i=0,j=n-1,f=0;
        while(i<j)
        {
+          count++;
            int mid=(i+j)/2;
            if(v[mid]==key)
            {
@@ -30,7 +31,7 @@ int main()
                cout<<count<<"comparisons and present"<<endl;
                break;
            }
-           count++;
+           
            if(v[mid]>key)
            j=mid;
            else
