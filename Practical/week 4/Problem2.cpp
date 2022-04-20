@@ -6,6 +6,7 @@
 //sorting the array.
 #include <iostream>
 using namespace std;
+int s=0;
 int partition(int a[],int p,int q,int* comparison)
 {
     
@@ -16,12 +17,14 @@ int partition(int a[],int p,int q,int* comparison)
        (*comparison)++;
         if(a[j]<=x)
         {
+            s++;
             i++;
             swap(a[i],a[j]);
 
         }
 
     }
+    s++;
     swap(a[p],a[i]);
     return i;
 }
@@ -54,7 +57,7 @@ int main()
         int comparison=0;
         //mergesort(a, 0, n - 1,&comparison);
         quicksort(a,0,n-1,&comparison);
-         cout<<"no. of comparisons done are"<<comparison<<endl;
+         cout<<"no. of comparisons done are"<<comparison<<" and the no. of swaps are "<<s<<endl;
         for (int i = 0; i < n; i++)
         {
             cout << a[i] << " ";
