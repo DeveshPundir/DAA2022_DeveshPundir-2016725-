@@ -3,7 +3,10 @@
 #include<vector>
 using namespace std;
 int main(){
-  vector<int> v;
+  int t;
+  cin>>t;
+  while(t--)
+  {vector<int> v;
   int n;
   cout<<"enter the no. of elements"<<endl;
   cin>>n;
@@ -25,5 +28,6 @@ int main(){
       }
   }
   cout<<count<<" are the no. of pairs"<<endl;
+  }
 return 0;
 }
